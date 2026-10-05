@@ -1,0 +1,78 @@
+[project]
+name = "overrep"
+version = "1.0.0"
+description = "OverRep — Overcomplete Reparameterization for Post-Pruning Recovery of LLMs"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+license = { file = "LICENSE" }
+authors = [{ name = "Seungmin Oh" }, { name = "Donggeon Lee" }, { name = "Jongbin Ryu" }]
+keywords = ["llm", "pruning", "reparameterization", "knowledge-distillation"]
+classifiers = [
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+dependencies = [
+    "torch==2.11.0",
+    "transformers==4.57.1",
+    "accelerate==1.14.0",
+    "peft==0.19.1",
+    "safetensors==0.8.0",
+    "huggingface-hub",
+    "datasets==5.0.0",
+    "bitsandbytes==0.49.2",
+    "lm_eval==0.4.10",
+    "sentencepiece",
+    "protobuf",
+    "pandas",
+    "termcolor",
+    "typer",
+    "rich",
+    "wandb",
+]
+
+[project.urls]
+Repository = "https://github.com/mmai-laboratory/overrep"
+
+[project.scripts]
+overrep-prepare = "overrep.features.prepare_data:main"
+overrep-cache = "overrep.features.dump_hidden_for_mse:main"
+overrep-cache-kd = "overrep.features.dump_hidden_for_kd:main"
+overrep-train = "overrep.train.mse:main"
+overrep-train-kd = "overrep.train.kd:main"
+overrep-eval = "overrep.eval.harness:cli"
+overrep-score = "overrep.eval.score:cli"
+overrep-runner = "overrep.runners.runner:main"
+
+[dependency-groups]
+dev = [
+    "ruff",
+]
+
+[tool.uv]
+environments = ["sys_platform == 'linux' and platform_machine == 'x86_64'"]
+default-groups = ["dev"]
+python-preference = "managed"
+
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true
+
+[tool.uv.sources]
+torch = [{ index = "pytorch-cu128" }]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/overrep"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]

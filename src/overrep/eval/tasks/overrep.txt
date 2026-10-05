@@ -1,0 +1,1 @@
+arc_easy,arc_challenge,race,boolq,winogrande,hellaswag,piqa,mathqa,openbookqa,mmlu
