@@ -2,14 +2,14 @@
 
 **Scale recovery capacity during training, then merge it away.** OverRep prunes LLMs more effectively at the same deployment cost.
 
+
 <div align="left">
-
-[![EMNLP 2026](https://img.shields.io/badge/EMNLP-2026-4b44ce.svg)]()
-[![Paper](https://img.shields.io/badge/Paper-PDF-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2609.06974)
-[![Checkpoints](https://img.shields.io/badge/Checkpoints-OverRep-ffd21e?logo=huggingface&logoColor=ffd21e)](https://huggingface.co/SoongE/OverRep)
-[![License](https://img.shields.io/badge/License-Apache_2.0-green?logo=apache&logoColor=white)](LICENSE)
-
+  <a href="https://2026.emnlp.org/"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/SoongE/SoongE/badge/emnlp-2026-dark.svg"><img src="https://raw.githubusercontent.com/SoongE/SoongE/badge/emnlp-2026.svg" alt="EMNLP 2026"></picture></a>
+  <a href="https://arxiv.org/abs/2609.06974"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/SoongE/SoongE/badge/arxiv-2609.06974-dark.svg"><img src="https://raw.githubusercontent.com/SoongE/SoongE/badge/arxiv-2609.06974.svg" alt="arXiv 2609.06974"></picture></a>
+  <a href="https://huggingface.co/SoongE/OverRep"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/SoongE/SoongE/badge/checkpoints-dark.svg"><img src="https://raw.githubusercontent.com/SoongE/SoongE/badge/checkpoints.svg" alt="Checkpoints"></picture></a>
+  <a href="LICENSE"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/SoongE/SoongE/badge/license-apache-2.0-dark.svg"><img src="https://raw.githubusercontent.com/SoongE/SoongE/badge/license-apache-2.0.svg" alt="License: Apache 2.0"></picture></a>
 </div>
+
 
 <p align="center">
   <img src="assets/main.png" width="100%">
